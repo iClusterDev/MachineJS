@@ -63,10 +63,10 @@ const machine = createMachine({
 });
 
 let state = machine.value;
-console.log(`current state: ${state}`); // off
+console.log(`current state: ${state}`); // off!
 
 state = machine.transition(state, "switch");
-console.log(`current state: ${state}`); // on
+console.log(`current state: ${state}`); // on!
 
 state = machine.transition(state, "switch");
-console.log(`current state: ${state}`); // off
+console.log(`current state: ${state}`); // off!
