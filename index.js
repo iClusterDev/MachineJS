@@ -22,7 +22,7 @@ function createMachine(stateMachineDefinition) {
   return machine;
 }
 
-const machine = createMachine({
+const toggle = createMachine({
   initialState: "off",
   off: {
     actions: {
@@ -62,11 +62,11 @@ const machine = createMachine({
   }
 });
 
-let state = machine.value;
+let state = toggle.value;
 console.log(`current state: ${state}`); // off!
 
-state = machine.transition(state, "switch");
+state = toggle.transition(state, "switch");
 console.log(`current state: ${state}`); // on!
 
-state = machine.transition(state, "switch");
+state = toggle.transition(state, "switch");
 console.log(`current state: ${state}`); // off!
