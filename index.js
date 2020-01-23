@@ -27,10 +27,10 @@ const toggle = createMachine({
   off: {
     actions: {
       onEnter() {
-        console.log("off: onEnter");
+        console.log("off: onEnter!");
       },
       onExit() {
-        console.log("off: onExit");
+        console.log("off: onExit!");
       }
     },
     transitions: {
